@@ -19,7 +19,7 @@ jobs:
     runs-on: ${{ matrix.host }}
     strategy:
       matrix:
-        host: ["ubuntu-22.04", "macos-13"]
+        host: ["ubuntu-22.04-arm", "macos-13"]
         sample: ${{ fromJSON(inputs.samples) }}
         exclude:
           # Exclude both glibc & uClibc ARC Linux toolchains as
